@@ -1,11 +1,11 @@
 const rp = require('request-promise-native');
 const config = require('config');
 
-const projectsUrl = config.get('constellation-url')+'/Projects';
-it('Testing to see if ${projectsUrl} is up', async () =>{
+const reservationsUrl = config.get('easyrent-url')+'/reservations/037c4c12-e04f-4bc9-b8ed-da5dbcac719f';
+it('Testing to see if we can get specific reservation', async () =>{
     
     var options = {
-        uri: projectsUrl,
+        uri: reservationsUrl,
         // Project
         headers:{
         },
