@@ -1,7 +1,7 @@
 const rp = require('request-promise-native');
 const config = require('config');
 
-const reservationsUrl = config.get('easyrent-url')+'/reservations/037c4c12-e04f-4bc9-b8ed-da5dbcac719f';
+const reservationsUrl = config.get('easyrent-url')+'/reservations/18e17779-3e70-4af7-8b66-020e3e758059';
 it('Testing to see if we can get specific reservation', async () =>{
     
     var options = {
