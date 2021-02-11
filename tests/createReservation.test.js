@@ -4,26 +4,31 @@ const config = require('config');
 const reservationsUrl = config.get('easyrent-url') + '/reservations';
 
 it(`Testing to see if we can make a reservation`, async () => {
-    // const date = new Date();
+    const date = new Date();
     let options = {
         method: 'POST',
         uri: reservationsUrl,
         headers: {
         },
-        raw: {
-            "customerId": "4394924942",
-            "reservationItems": [
+        body: {
+            "customerId" : "dan.dan@dan.com",
+            "reservationItems":[
                 {
-                    "description": "Snowshoes",
-                    "itemId": 4949495
+                    "description":"Canoe",
+                    "itemId":4949489
                 },
                 {
-                    "description": "Big ol yeezy coat",
-                    "itemId": 4949496
-                }
-            ],
-            "dueDate": 1610148694320,
+                    "description":"Canoe",
+                    "itemId":4949489
+                },
+                {
+                    "description":"Canoe",
+                    "itemId":4949489
+                },
+                ],
+                "dueDate":1610148694321
         },
+        json: true,
         simple: false,
     };
 
@@ -32,6 +37,7 @@ it(`Testing to see if we can make a reservation`, async () => {
 
     try {
         let response = await rp(options);
+        return response;
     } catch (exception) {
         errorCaught = exception;
         errorWasCaught = true;

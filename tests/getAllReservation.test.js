@@ -16,6 +16,7 @@ it(`Testing to see if ${homeUrl} is up`, async () =>{
 
     try{
         var response = await rp(options);
+        return response;
     } catch (exception){
         errorCaught=exception;
         errorWasCaught=true;
