@@ -11,7 +11,7 @@ async function createReservation() {
         headers: {
         },
         body: {
-            "customerId" : "dan.dan@dan.com",
+            "customerId" : "eve@adam.com",
             "reservationItems":[
                 {
                     "description":"Ben and Jerry",
