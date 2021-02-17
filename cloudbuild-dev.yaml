@@ -32,3 +32,14 @@ steps:
   args:
   - 'push'
   - 'gcr.io/$PROJECT_ID/easyrent-team3:latest'
+
+# This step runs the integration tests in the Test environment
+- name: 'gcr.io/cloud-builders/gcloud'
+  id: Trigger Test Environment Integration Tests
+  args:
+  - 'beta'
+  - 'builds'
+  - 'triggers'
+  - 'run'
+  - 'e5a6b460-ba17-4a3d-aaf1-8f4bf21a49a7'
+  - '--branch=main'
