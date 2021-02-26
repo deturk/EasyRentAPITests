@@ -11,7 +11,7 @@ it(`Testing to see if we can make a reservation`, async () => {
         headers: {
         },
         body: {
-            "customerId" : "dan.dan@dan.com",
+            "customerId" : "Agoda@agoda.com",
             "reservationItems":[
                 {
                     "description":"Canoe",
