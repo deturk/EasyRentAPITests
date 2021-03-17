@@ -1,0 +1,49 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: team3
+spec:
+  ports:
+    - port: 6379
+      name: team3
+  clusterIP: None
+  selector:
+    app: team3
+---
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: team3
+spec:
+  selector:
+    matchLabels:
+      app: team3  # has to match .spec.template.metadata.labels
+  serviceName: team3
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: team3  # has to match .spec.selector.matchLabels
+    spec:
+      containers:
+        - name: team3
+          image: redis:3.2-alpine
+          imagePullPolicy: Always
+          args: ["--requirepass", "$(REDIS_PASS)", "--appendonly", "yes", "--save", "900", "1", "--save", "30", "2"]
+          ports:
+            - containerPort: 6379
+              name: team3
+          env:
+          - name: REDIS_PASS
+            valueFrom:
+              secretKeyRef:
+                name: env-secrets-dev
+                key: REDIS_PASS
+          volumeMounts:
+            - name: redis-volume
+              mountPath: /data
+      volumes:
+        - name: redis-volume
+          gcePersistentDisk:
+            pdName: team3-disk
+            fsType: ext4
