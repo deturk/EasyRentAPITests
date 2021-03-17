@@ -1,0 +1,399 @@
+---
+createTime: '2021-02-17T21:46:59.953651017Z'
+description: Agile Group 3
+disabled: true
+filename: cloudbuild-prod.yaml
+id: 4dc8dfef-f5f0-461b-84fe-42eff898e847
+name: EasyRentApiTest-Prod-Agile3
+triggerTemplate:
+  branchName: main
+  projectId: constellation-275522
+  repoName: github_deturk_easyrentapitests
+---
+createTime: '2021-02-17T21:21:39.236795773Z'
+description: Agile Group 3
+disabled: true
+filename: cloudbuild-test.yaml
+id: bd4f07b3-ac27-448b-9069-eeb4bce2b793
+name: EasyRentAPITest-Test-Agile3
+triggerTemplate:
+  branchName: main
+  projectId: constellation-275522
+  repoName: github_deturk_easyrentapitests
+---
+createTime: '2021-02-16T21:54:12.661516558Z'
+description: Runs prod environment.
+id: 614b92da-1d30-480c-a25c-72d4e8284416
+name: EasyRentTests-Group1-Prod
+---
+createTime: '2021-02-16T21:53:23.993140993Z'
+description: Runs test environment.
+id: aa97d5be-a940-4378-b982-676a2e12fe0f
+name: EasyRentTests-Group1-Test
+---
+createTime: '2021-02-16T21:25:30.690617525Z'
+filename: cloudbuild-dev.yaml
+id: 73a52988-769d-4b8d-9654-fb87a0571db6
+name: EasyRentAPITestsDev-Agile-Team-4
+triggerTemplate:
+  branchName: main
+  projectId: constellation-275522
+  repoName: github_jacobbeck13_easyrentapitests
+---
+createTime: '2021-02-12T22:09:23.325304627Z'
+description: easyRentAPI trigger
+filename: cloudbuild-dev.yaml
+id: 6d9eef38-6605-4544-8a77-a1d17214c6b3
+name: Agile-Team-1
+triggerTemplate:
+  branchName: ^main$
+  projectId: constellation-275522
+  repoName: github_mebenal_cit262-easyrentapi
+---
+createTime: '2021-02-12T22:02:18.500268101Z'
+filename: cloudbuild-dev.yaml
+id: f4149e9f-16d0-4da4-bd52-8ddb4938e662
+name: Team-6
+triggerTemplate:
+  branchName: main
+  projectId: constellation-275522
+  repoName: github_kosorio2_devops2
+---
+createTime: '2021-02-12T21:58:28.446935686Z'
+description: Runs dev environment.
+filename: cloudbuild-dev.yaml
+id: e9f5647b-c63d-4e3a-9db4-5bbb854d3024
+name: EasyRentTests-Group1-Dev
+triggerTemplate:
+  branchName: ^main$
+  projectId: constellation-275522
+  repoName: github_mebenal_cit262-easyrentapi
+---
+createTime: '2021-02-12T21:33:34.100469585Z'
+description: Runs the branch with all tests combined.
+filename: cloudbuild-dev.yaml
+id: 64f4ba72-16a3-4efd-8c61-30df6a73bba4
+name: EasyRentTests-mergeTests
+triggerTemplate:
+  branchName: ^mergeTests$
+  projectId: constellation-275522
+  repoName: github_mebenal_cit262-easyrentapi
+---
+createTime: '2021-02-12T13:45:20.281474314Z'
+filename: cloud-build-dev.yaml
+github:
+  name: EasyRentWeb
+  owner: BYUI-CIT-Internship
+  push:
+    branch: master
+id: 61f01e74-110b-41eb-82a7-e9188ed9c858
+name: EasyRentWeb-Dev
+---
+createTime: '2021-02-11T22:41:23.477630412Z'
+description: Agile Group 3
+filename: cloudbuild-dev.yaml
+id: 9568886a-7713-492d-b5c6-fd3f265e207a
+name: EasyRentApiTest-Dev-Agile3
+triggerTemplate:
+  branchName: main
+  projectId: constellation-275522
+  repoName: github_deturk_easyrentapitests
+---
+createTime: '2021-01-12T18:05:57.834572561Z'
+disabled: true
+filename: cloud-build-prod.yaml
+github:
+  name: EasyRentAPI
+  owner: BYUI-CIT-Internship
+  push:
+    branch: main
+id: 3dc8c43c-e920-4f0f-83bd-310d8fba7e06
+name: easyrent-prod-api
+substitutions:
+  _SHORT_SHA: latest
+---
+createTime: '2021-01-12T16:57:56.505799622Z'
+disabled: true
+filename: cloud-build-test.yaml
+github:
+  name: EasyRentAPI
+  owner: BYUI-CIT-Internship
+  push:
+    branch: main
+id: 41336c5b-0cf2-45e6-82c0-1ad87f924a10
+name: esayrent-test-api
+substitutions:
+  _SHORT_SHA: latest
+---
+createTime: '2021-01-11T18:34:33.862941336Z'
+description: Push to any branch
+filename: cloud-build-dev.yaml
+github:
+  name: EasyRentAPI
+  owner: BYUI-CIT-Internship
+  push:
+    branch: main
+id: 73108256-a18b-4324-92b1-daccf9bacea8
+name: EasyRent-dev-API
+tags:
+- github-default-push-trigger
+---
+createTime: '2020-09-18T14:55:28.612910989Z'
+filename: cloudbuild-prod.yaml
+github:
+  name: Confluence
+  owner: BYUI-CIT-362
+  push:
+    branch: master
+id: b77386db-dae7-446f-9a2d-8ed7af52a250
+name: confluence-prod
+---
+createTime: '2020-08-18T15:11:08.025576980Z'
+description: Push to master
+disabled: true
+filename: cloudbuild-test.yaml
+github:
+  name: Sql-server-location
+  owner: Constellation-BYUI
+  push:
+    branch: ^master$
+id: 4a82a13c-b2e6-4f24-91d6-94c10fcaaa67
+name: sql-server-location-test-3
+tags:
+- github-default-push-trigger
+---
+createTime: '2020-08-17T14:52:33.194836707Z'
+disabled: true
+filename: clear-log.yaml
+github:
+  name: sql-server
+  owner: Constellation-BYUI
+  push:
+    branch: ^master$
+id: 7003a610-9687-44ab-8d69-afaab5539e24
+name: clear-sql-log
+---
+createTime: '2020-08-12T14:20:24.441324758Z'
+description: location test for sql server
+disabled: true
+filename: cloudbuild-location-test.yaml
+github:
+  name: sql-server
+  owner: Constellation-BYUI
+  push:
+    branch: ^master$
+id: 56de7437-c590-46c6-b103-5f22ef7c9eab
+name: sql-server-location-test
+substitutions:
+  _SHORT_SHA: c86d37f
+---
+createTime: '2020-07-22T20:00:36.899285506Z'
+description: Push to master
+disabled: true
+filename: cloudbuild-test.yaml
+github:
+  name: SQLServer-Confluence
+  owner: BYUI-CIT-362
+  push:
+    branch: master
+id: 8aea4bd6-26f9-473e-a53e-ed05799b1507
+name: Deploy-Test
+tags:
+- github-default-push-trigger
+---
+createTime: '2020-07-15T22:47:17.169505995Z'
+description: Triggered manually or by Production build
+disabled: true
+filename: cloudbuild-prod.yaml
+github:
+  name: ConstellationTests
+  owner: BYUI-CIT-262
+  push:
+    branch: master
+id: bc2fc648-fbfb-4528-a3ff-609ca9adef22
+name: Integration-Tests-Prod-Environment
+tags:
+- github-default-push-trigger
+---
+createTime: '2020-07-15T22:47:15.005312896Z'
+description: Triggered manually or by Stage/Test build
+disabled: true
+filename: cloudbuild-test.yaml
+github:
+  name: ConstellationTests
+  owner: BYUI-CIT-262
+  push:
+    branch: master
+id: f9bf9426-b86b-464e-a339-f9f4ef12ec9d
+name: Integration-Tests-Test-Environment
+tags:
+- github-default-push-trigger
+---
+createTime: '2020-07-15T22:45:36.623305451Z'
+description: Triggered manually or by Development build
+filename: cloudbuild-dev.yaml
+github:
+  name: ConstellationTests
+  owner: BYUI-CIT-262
+  push:
+    branch: master
+id: 2b1c6bb1-5cef-467e-b889-4a0f618e4299
+name: Integration-Tests-Dev-Environment
+tags:
+- github-default-push-trigger
+---
+createTime: '2020-07-10T21:26:47.109978964Z'
+description: Push to master
+disabled: true
+filename: cloudbuild-test.yaml
+github:
+  name: Confluence
+  owner: BYUI-CIT-362
+  push:
+    branch: master
+id: 28f61cf8-aeac-4042-94f8-61a9ad0f1660
+name: Test
+tags:
+- github-default-push-trigger
+---
+createTime: '2020-07-06T22:46:23.299970282Z'
+description: Push to master
+disabled: true
+filename: cloudbuild-prod.yaml
+github:
+  name: NFS-Confluence
+  owner: BYUI-CIT-362
+  push:
+    branch: master
+id: 1d187aad-193c-4c9d-9506-4d155c345aa3
+name: Confluence-NFS-Prod
+substitutions:
+  _SHORT_SHA: 2dd3368
+tags:
+- github-default-push-trigger
+---
+createTime: '2020-07-06T22:38:04.335727259Z'
+description: Push to master
+disabled: true
+filename: cloudbuild-test.yaml
+github:
+  name: NFS-Confluence
+  owner: BYUI-CIT-362
+  push:
+    branch: master
+id: 1f5a657f-5373-416d-a4ef-1480e0dc5eb4
+name: Confluence-NFS-Test
+tags:
+- github-default-push-trigger
+---
+createTime: '2020-05-27T20:27:23.398524256Z'
+description: Push to master
+disabled: true
+filename: cloudbuild-dev.yaml
+github:
+  name: sql-server
+  owner: Constellation-BYUI
+  push:
+    branch: master
+id: 779c8b8c-68b5-484d-ad8f-b3a0eadf5dba
+name: SQL-Server-Dev
+tags:
+- github-default-push-trigger
+---
+createTime: '2020-05-22T19:54:00.851228401Z'
+disabled: true
+filename: cloudbuild-prod.yaml
+github:
+  name: sql-server
+  owner: Constellation-BYUI
+  push:
+    branch: master
+id: b91bf782-72ff-4cda-b9bd-13051a4f0881
+name: sql-server-prod
+substitutions:
+  SHORT_SHA: ''
+---
+createTime: '2020-05-22T19:53:15.086227887Z'
+disabled: true
+filename: cloudbuild-stage.yaml
+github:
+  name: sql-server
+  owner: Constellation-BYUI
+  push:
+    branch: master
+id: 815d72af-32fa-434d-a03a-498fb49bb0d4
+name: sql-server-stage
+substitutions:
+  SHORT_SHA: ''
+---
+createTime: '2020-05-22T19:49:39.605301213Z'
+description: Push to master
+filename: cloudbuild-local.yaml
+github:
+  name: sql-server
+  owner: Constellation-BYUI
+  push:
+    branch: master
+id: 38cbf041-d348-4034-a073-3ed99080fcdc
+name: sql-server-local
+tags:
+- github-default-push-trigger
+---
+createTime: '2020-05-20T15:40:13.709219221Z'
+description: Manually Triggered
+disabled: true
+filename: cloudbuild-prod.yaml
+github:
+  name: ConstellationWebApp
+  owner: Constellation-BYUI
+  push:
+    branch: master
+id: a87f4780-8ab2-4939-a24b-e4a609afd87d
+name: Prod-Deployment
+substitutions:
+  _SHORT_SHA: ''
+tags:
+- github-default-push-trigger
+---
+createTime: '2020-05-20T15:40:10.842647896Z'
+description: Manually triggered
+disabled: true
+filename: cloudbuild-stage.yaml
+github:
+  name: ConstellationWebApp
+  owner: Constellation-BYUI
+  pullRequest:
+    branch: ^master$
+    commentControl: COMMENTS_ENABLED_FOR_EXTERNAL_CONTRIBUTORS_ONLY
+id: fd5a7641-3d1c-48bb-a285-50614a340f80
+name: Stage-Deployment
+substitutions:
+  _SHORT_SHA: ''
+tags:
+- github-default-push-trigger
+---
+createTime: '2020-05-14T17:54:23.151059051Z'
+description: Push to master
+filename: cloudbuild-local.yaml
+github:
+  name: NFSShare
+  owner: Constellation-BYUI
+  push:
+    branch: master
+id: 6ed60208-236f-4ced-9d7a-f9bd1bfc4b75
+name: default-push-trigger-2
+tags:
+- github-default-push-trigger
+---
+createTime: '2020-05-06T21:52:31.808542433Z'
+description: Push to master (after PR is merged for example)
+filename: cloudbuild-dev.yaml
+github:
+  name: ConstellationWebApp
+  owner: Constellation-BYUI
+  push:
+    branch: ^master$
+id: 31a464a5-d386-4857-87c9-1ca4a2df1a78
+name: Dev-Deployment
+tags:
+- github-default-push-trigger
